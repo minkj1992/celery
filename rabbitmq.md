@@ -86,3 +86,4 @@ celery 5.x 기준으로 amqp는 더이상 사용하지 말 것을 권유합니�
 >> 정리를 하자면, 클라이언트 연결이 4개 존재하고 각 연결을 100개의 task를 produce한다고 하면 amqp는 총 400개의 unique queues를 생성해 각 result를 저장하지만, `rpc://`의 경우에는 4 queues(1 per client)를 생성하고 각 큐에 100 results를 저장한다고 한다. 
 
 **정리를 하자면 result_backend 로 amqp://는 사용하지 말아야 한다.**
+
